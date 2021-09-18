@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import "./App.css";
+import React from "react"
+import ReactDOM from "react-dom"
+import { Board } from "./components"
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">ggggggg</header>
-    </div>
-  );
-};
+    <React.StrictMode>
+      <div>
+        <Board />
+      </div>
+    </React.StrictMode>
+  )
+}
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"))
