@@ -1,0 +1,17 @@
+.spread {
+  height: 25vh;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.firstSpread,
+.lastSpread {
+  height: 25vh;
+  width: auto;
+}
+
+.empty {
+  height: 25vh;
+  width: auto;
+}

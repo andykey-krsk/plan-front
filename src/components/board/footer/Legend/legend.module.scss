@@ -1,0 +1,27 @@
+.legend {
+  
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.legendMarker {
+  height: 30px;
+  width: 33px;
+  background: red;
+}
+
+.legendBox {
+  height: 30px;
+  border: 3px solid red;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.legendText {
+  padding-right: 10px;
+  padding-left: 10px;
+}

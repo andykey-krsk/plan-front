@@ -3,7 +3,12 @@ import style from "./board.module.scss"
 import { Footer } from "./footer"
 import { Header } from "./header"
 import { Menu } from "./menu"
-import { Spread } from "./spread"
+import {
+  SpreadLayout,
+  FirstSpread,
+  LastSpread,
+  EmptySpread,
+} from "./spread-layout"
 
 export const Board = () => {
   return (
@@ -11,12 +16,27 @@ export const Board = () => {
       <Menu />
       <Header />
       <div className={style.row}>
-        <Spread />
-        <Spread />
-        <Spread />
-        <Spread />
-        <Spread />
-        <Spread />
+        <FirstSpread />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <EmptySpread />
+        <EmptySpread />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <EmptySpread />
+        <EmptySpread />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <SpreadLayout />
+        <LastSpread />
       </div>
       <Footer />
     </div>

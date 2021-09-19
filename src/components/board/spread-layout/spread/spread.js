@@ -5,9 +5,6 @@ export const Spread = () => {
   //code
   return (
     //jsx
-    <div className={style.spread}>
-      <div>четная</div>
-      <div>нечетная</div>
-    </div>
+    <div className={style.spread}>разворот</div>
   )
 }

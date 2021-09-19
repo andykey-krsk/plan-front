@@ -5,6 +5,6 @@ export const Header = () => {
   //code
   return (
     //jsx
-    <div className={style.header}>Header</div>
+    <div className={style.header}>НКК №73/1349 от 24 сентября</div>
   )
 }

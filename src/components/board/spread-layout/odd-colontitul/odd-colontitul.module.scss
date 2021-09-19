@@ -1,0 +1,30 @@
+.oddColontitul {
+  background: #ccc;
+  height: 30px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.numPage {
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid #000;
+}
+
+.ver,
+.cor,
+.qr {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
