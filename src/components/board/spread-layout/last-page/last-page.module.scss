@@ -1,8 +1,38 @@
 .lastPage {
   background: #888;
   border: 1px solid #000;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  display: grid;
+  //grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 4fr;
+  height: auto;
+}
+
+.scanword,
+.output {
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+}
+
+.output {
+  background: #666;
+  height: 7%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.know {
+  //transform: rotate(90deg);
 }

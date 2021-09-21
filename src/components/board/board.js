@@ -1,4 +1,4 @@
-import { react } from "react"
+import { react, useRef } from "react"
 import style from "./board.module.scss"
 import { Footer } from "./footer"
 import { Header } from "./header"
@@ -10,34 +10,74 @@ import {
   EmptySpread,
 } from "./spread-layout"
 
+const numberData = {
+  number: 73,
+  gross: 1349,
+  date: "24 сентября 2021 год",
+  value: 32,
+  edition: 40000,
+  order: 2110,
+}
+
+const pages = makePages(32)
+
+function makePages(value) {
+  const pages = []
+  for (let i = 1; i <= value; i++) {
+    pages.push({
+      id: i,
+      number: i,
+      article: "статья",
+    })
+  }
+  return pages
+}
+
+const currentNumber = makeSpreads(pages)
+function makeSpreads(pages) {
+  const result = []
+  const temp = []
+  let even = {}
+  let odd = {}
+  pages.forEach((el) => {
+    if (el.number === 1) {
+      result.push(<FirstSpread page={el} />)
+      temp.push(el)
+    }
+
+    if (el.number === pages.length) {
+      result.push(<LastSpread page={el} />)
+      temp.push(el)
+    }
+
+    if (el.number > 1 && el.number < pages.length) {
+      if (el.number % 2 === 0) {
+        even = el
+      } else {
+        odd = el
+        result.push(<SpreadLayout even={even} odd={odd} />)
+        even = {}
+        odd = {}
+      }
+
+      if (el.number === 11 || el.number === 21) {
+        result.push(<EmptySpread />)
+        result.push(<EmptySpread />)
+      }
+    }
+  })
+  return result
+}
+
+
+
 export const Board = () => {
+  const ref = useRef()
   return (
-    <div className={style.board}>
+    <div ref={ref} className={style.board}>
       <Menu />
       <Header />
-      <div className={style.row}>
-        <FirstSpread />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <EmptySpread />
-        <EmptySpread />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <EmptySpread />
-        <EmptySpread />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <SpreadLayout />
-        <LastSpread />
-      </div>
+      <div className={style.row}>{currentNumber}</div>
       <Footer />
     </div>
   )

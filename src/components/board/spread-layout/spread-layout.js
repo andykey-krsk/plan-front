@@ -6,33 +6,33 @@ import { OddPage } from "./odd-page"
 import { Spread } from "./spread"
 import style from "./spread-layout.module.scss"
 
-export const SpreadLayout = () => {
+export const SpreadLayout = (props) => {
   //code
   return (
     //jsx
     <div className={style.spread}>
-      <EvenPage />
-      <OddPage />
+      <EvenPage page={props.even} />
+      <OddPage page={props.odd} />
     </div>
   )
 }
 
-export const FirstSpread = () => {
+export const FirstSpread = (props) => {
   //code
   return (
     //jsx
     <div className={style.firstSpread}>
-      <FirstPage>Первая</FirstPage>
+      <FirstPage page={props.page} />
     </div>
   )
 }
 
-export const LastSpread = () => {
+export const LastSpread = (props) => {
   //code
   return (
     //jsx
     <div className={style.lastSpread}>
-      <LastPage>Последняя</LastPage>
+      <LastPage page={props.page} />
     </div>
   )
 }
