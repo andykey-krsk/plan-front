@@ -13,7 +13,7 @@ import {
 const numberData = {
   number: 73,
   gross: 1349,
-  date: "24 сентября 2021 год",
+  date: "24 сентября 2021 года",
   value: 32,
   edition: 40000,
   order: 2110,
@@ -28,6 +28,9 @@ function makePages(value) {
       id: i,
       number: i,
       article: "статья",
+      cor: "Н",
+      ver: "А",
+      qr: "Q",
     })
   }
   return pages
@@ -69,14 +72,14 @@ function makeSpreads(pages) {
   return result
 }
 
-
-
 export const Board = () => {
   const ref = useRef()
   return (
     <div ref={ref} className={style.board}>
       <Menu />
-      <Header />
+      <Header
+        numberData={`НКК №${numberData.number}/${numberData.gross} от ${numberData.date}`}
+      />
       <div className={style.row}>{currentNumber}</div>
       <Footer />
     </div>

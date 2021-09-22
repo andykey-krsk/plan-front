@@ -7,7 +7,7 @@ export const LastPage = (props) => {
   return (
     //jsx
     <div className={style.lastPage}>
-      <EvenColontitul number={props.page.number} />
+      <EvenColontitul info={props.page} />
       <div className={style.content}>{props.page.article}</div>
       <div className={style.row}>
         <div className={style.scanword}>сканворд</div>

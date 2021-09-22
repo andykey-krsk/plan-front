@@ -8,7 +8,7 @@ export const OddPage = (props) => {
     //jsx
     <>
       <div className={style.oddPage}>
-        <OddColontitul number={props.page.number} />
+        <OddColontitul info={props.page} />
         <div className={style.content}>{props.page.article}</div>
       </div>
     </>

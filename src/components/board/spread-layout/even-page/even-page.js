@@ -8,7 +8,7 @@ export const EvenPage = (props) => {
   return (
     //jsx
     <div className={style.evenPage}>
-      <EvenColontitul number={props.page.number} />
+      <EvenColontitul info={props.page} />
       <div className={style.content}>{props.page.article}</div>
     </div>
   )

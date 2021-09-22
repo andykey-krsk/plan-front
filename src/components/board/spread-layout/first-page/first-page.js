@@ -7,7 +7,7 @@ export const FirstPage = (props) => {
   return (
     //jsx
     <div className={style.firstPage}>
-      <OddColontitul number={props.page.number} />
+      <OddColontitul info={props.page} />
       <div className={style.content}>
         <div className={style.anons}>Анонсы</div>
         <div className={style.title}>Заголовок</div>

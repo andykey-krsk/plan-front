@@ -6,10 +6,10 @@ export const EvenColontitul = (props) => {
   return (
     //jsx
     <div className={style.evenColontitul}>
-      <div className={style.numPage}>{props.number}</div>
-      <div className={style.ver}>А</div>
-      <div className={style.cor}>Н</div>
-      <div className={style.ver}>Q</div>
+      <div className={style.numPage}>{props.info.number}</div>
+      <div className={style.ver}>{props.info.ver}</div>
+      <div className={style.cor}>{props.info.cor}</div>
+      <div className={style.ver}>{props.info.qr}</div>
     </div>
   )
 }
