@@ -44,7 +44,7 @@ function makeSpreads(pages) {
   let odd = {}
   pages.forEach((el) => {
     if (el.number === 1) {
-      result.push(<FirstSpread page={el} />)
+      result.push(<FirstSpread page={el}/>)
       temp.push(el)
     }
 
