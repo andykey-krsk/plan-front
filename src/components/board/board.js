@@ -13,7 +13,7 @@ import {
 const numberData = {
   number: 73,
   gross: 1349,
-  date: "24 сентября 2021 года",
+  date: "24 сентября 2021 года ",
   value: 32,
   edition: 40000,
   order: 2110,
